@@ -89,7 +89,7 @@ main {
     height: 528px;
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 2em 1.5em;
     gap: 2em;
     background-color: #24232C;
 }
@@ -143,7 +143,6 @@ main {
 .checkbox-container {
     display: flex;
     flex-direction: column;
-    margin-top: .5em;
     color: #E6E5EA;
     font-size: 18px;
     font-weight: 700;
@@ -239,7 +238,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .generate-button {
-    width: 100%;
+    width: 476px;
     height: 65px;
     background-color: #A4FFAF;
     color: #24232C;
