@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 1440px;
+    height: 1024px;
+    background-color: #08070B;
+    font-family: 'JetBrains Mono', sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 133px;
+    left: 590px;
+    color: #817D92;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+main {
+    width: 540px;
+    height: 632px;
+    position: absolute;
+    top: 196px;
+    left: 450px;
+}
+
+.password-content, .password-content::placeholder {
+    width: 540px;
+    height: 80px;
+    background-color: #24232C;
+    position: relative;
+    color: #E6E5EA;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-bottom: .75em;
+}
+
+.password-content::placeholder {
+    opacity: 0.25;
+}
+
+.password-content input {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #24232C;
+    color: #E6E5EA;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 1em;
+    outline: none;
+}
+
+.fa-copy {
+    font-size: 24px;
+    position: absolute;
+    top: 28px;
+    left: 487px;
+    color: #A4FFAF;
+    cursor: pointer;
+}
+
+.fa-copy:hover {
+    color: #FFFFFF;
+}
+
+#copy-message {
+    color: #A4FFAF;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 29px;
+    left: 406px;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+.controls-content {
+    width: 540px;
+    height: 528px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+    background-color: #24232C;
+}
+
+#character-length {
+    width: 100%;
+    height: 43px;
+    color: #E6E5EA;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#value {
+    color: #A4FFAF;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.slider-container {
+    width: 476px;
+    height: 71px;
+}
+
+.slider {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, rgba(24,23,31) 0%, rgb(24,23,31) 100%);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E6E5EA;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background-color: #18171F;
+    border: 2px solid #A4FFAF;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5em;
+    color: #E6E5EA;
+    font-size: 18px;
+    font-weight: 700;
+    width: 315px;
+    height: 152px;
+}
+
+.checkbox-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 23px;
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    transition: border 0.01 ease;
+    margin-right: 1em;
+}
+
+input[type="checkbox"]:hover + label::before   {
+    border: 2px solid #A4FFAF;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    background-color: #A4FFAF;
+    border: 2px solid #A4FFAF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #18171F;
+} 
+
+.strength-container {
+    width: 476px;
+    height: 72px;
+    background-color: #18171F;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+}
+
+.strength-container label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #817D92;
+}
+
+.strength-content {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.strength-text {
+    margin: 0 .7em 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E6E5EA;
+}
+
+.strength-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 8px;
+}
+
+.bar {
+    color: #E6E5EA;
+    border: 2px solid #E6E5EA;
+    width: 10px;
+    height: 28px;
+}
+
+.generate-button {
+    width: 100%;
+    height: 65px;
+    background-color: #A4FFAF;
+    color: #24232C;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', sans-serif;
+}
+
+.generate-button:hover  {
+    background-color: #24232C;
+    border: 2px solid #A4FFAF;
+    color: #A4FFAF;
+}
+
+.generate-button:hover * {
+    color: #A4FFAF;
+}
+
+.fa-arrow-right {  
+    color: #24232C;
+    margin-left: 24px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    html, body {
+        width: 768px;
+        height: 1024px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    header {
+        position: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 31px;
+    }
+    
+    main {
+        width: 100%;
+        height: 632px;
+        position: initial;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 728px) {
+
+    html, body {
+        width: 100%;
+        height: 667px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    header {
+        position: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    
+    main {
+        width: 100%;
+        height: 540px;
+        position: initial;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .password-content, .password-content::placeholder {
+        width: 343px;
+        font-size: 24px;   
+        margin-bottom: 16px;
+    }
+    
+    .password-content input {
+        width: 343px;
+        height: 64px;
+        font-size: 24px;
+    }
+    
+    .fa-copy {
+        top: 30px;
+        left: 310px;
+        font-size: 20px;
+    }
+
+    #copy-message {
+        left: 230px;
+    }
+    
+    .controls-content {
+        width: 343px;
+        height: 423px;
+        padding: 1em;
+        gap: 1em;
+    }
+    
+    #character-length {
+        width: 100%;
+        height: 31px;
+    }    
+    
+    #value {
+        font-size: 24px;
+    }
+    
+    .slider-container {
+        width: 311px;
+        height: 67px;
+    }
+    
+    .checkbox-container {
+        font-size: 16px;
+        width: 280px;
+        height: 132px;
+        margin-top: 0;
+    }
+    
+    .checkbox-container form {
+        gap: 16px;
+        width: 100%;
+        height: 21px;
+    }
+
+    .checkbox-container label {
+        height: 21px;
+    }
+
+    .strength-container {
+        width: 311px;
+        height: 56px;
+        margin-top: 1em;
+    }
+    
+    .strength-container label {
+        font-size: 16px;
+    }
+    
+    .strength-text {
+        font-size: 18px;
+    }
+    
+    .generate-button {
+        width: 100%;
+        height: 56px;
+        font-size: 16px;   
+    }
+    
+    .fa-arrow-right {  
+        color: #24232C;
+        margin-left: 24px;
+    }
+
+
+}
+
+

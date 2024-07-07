@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/cfd5fcf59b.js" crossorigin="anonymous"></script>
+  <link href="./fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="script.js"></script>
+  
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+  <header class="header">Password generator</header>
+
+  <main class="container">
+    <div class="password-content">
+      <input type="text" class="password" id="password" placeholder="P4$5W0rD !">
+      <i class="fa-regular fa-copy" id="copy-icon"></i>
+      <span id="copy-message" style="display: none;">Copied</span>
+    </div>
+  
+    <div class="controls-content">
+      <form class="slider-container">
+      <label for="length" id="character-length">
+        Character length <span id="value">0</span></label>
+      <input type="range" id="myRange" class="slider" min="0" max="20" value="0">
+    </form>
+    <div class="checkbox-container">
+      <form>
+        <input type="checkbox" id="uppercase" class="checkbox">
+        <label for="uppercase">Include Uppercase Letters</label>
+      
+        <input type="checkbox" id="lowercase" class="checkbox">
+        <label for="lowercase">Include Lowercase Letters</label>
+      
+        <input type="checkbox" id="numbers" class="checkbox">
+        <label for="numbers">Include Numbers</label>
+      
+        <input type="checkbox" id="symbols" class="checkbox">
+        <label for="symbols">Include Symbols</label>
+      </form>
+    </div>
+
+    <div class="strength-container">
+      <label for="strength">STRENGTH</label>
+      <div class="strength-content">
+      <span class="strength-text"></span>
+      <div class="strength-bar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    </div>
+
+    <button type="button" class="generate-button" id="submit">
+      GENERATE <i class="fa fa-arrow-right"></i>
+    </button>
+    </div>
+
+  </main>
+
+</body>
+</html>
