@@ -89,7 +89,7 @@ main {
     height: 528px;
     display: flex;
     flex-direction: column;
-    padding: 2em 1.5em;
+    padding: 2em;
     gap: 2em;
     background-color: #24232C;
 }
