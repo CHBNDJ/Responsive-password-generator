@@ -90,7 +90,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1.5em 2em;
-    gap: 2em;
+    gap: 2.5em;
     background-color: #24232C;
 }
 
